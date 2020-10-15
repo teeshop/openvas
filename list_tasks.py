@@ -1,2 +1,1 @@
-
 from gvm.errors import GvmError
