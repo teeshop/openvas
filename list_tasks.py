@@ -21,4 +21,8 @@ with Gmp(connection, transform=transform) as gmp:
 
     # Get names of tasks
     task_names = tasks.xpath('task/name/text()')
-    pretty_print(task_names)
+
+    # get targets
+    target_id = tasks.xpath('task/target/@id')[0]
+    target = gmp.get_target(target_id)
+    pretty_print(target)
